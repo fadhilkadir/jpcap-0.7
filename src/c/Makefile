@@ -3,7 +3,7 @@
 
 # You should set JAVA_HOME before running 'make'
 # Or, you can manually change the following line, e.g., 'JAVA_DIR = /usr/java/latest'
-JAVA_DIR = $(JAVA_HOME)
+JAVA_DIR = /usr/lib/jvm/java-12-oracle/
 
 JNI_INCLUDE = $(JAVA_DIR)/include
 
@@ -12,7 +12,7 @@ PLATFORM = $(shell "uname")
 
 ifeq ($(PLATFORM), Linux)
     JNI_INCLUDE2 = $(JAVA_DIR)/include/linux
-    COMPILE_OPTION = -shared -L.
+    COMPILE_OPTION = -shared -L. -fPIC
     SUFFIX = .so
 else
 ifeq ($(PLATFORM), FreeBSD)
