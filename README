@@ -1,6 +1,13 @@
 forked by fk - to add support for x64
 tested on Java 12 - 03/08/19
 
+Update on usage (for 64-bit):
+To compile java code: javac -cp <directory to file>/jpcap.jar: <name of file>.java
+
+To run java code: java -cp <directory to file>/jpcap.jar: <name of class>
+
+Note: Copy libjpcap.so from src/c 
+
 
 Jpcap ver.0.7
 
